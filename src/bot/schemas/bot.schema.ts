@@ -3,10 +3,10 @@ import { HydratedDocument } from "mongoose";
 
 export type BotDocument = HydratedDocument<Bot>;
 
-@Schema()
+@Schema({ versionKey: false })
 export class Bot {
-  @Prop({ required: true, unique: true })
-  user_id: number;
+  @Prop()
+  user_id: string;
 
   @Prop()
   user_name: string;
@@ -20,7 +20,7 @@ export class Bot {
   @Prop()
   phone_number: string;
 
-  @Prop({ default: false })
+  @Prop()
   status: boolean;
 
   @Prop()
@@ -36,13 +36,10 @@ export class Bot {
   gender: string;
 
   @Prop()
-  birth_year: number;
+  brith_year: string;
 
   @Prop()
   balance: number;
-
-  @Prop()
-  offer_code: number;
 }
 
 export const BotSchema = SchemaFactory.createForClass(Bot);

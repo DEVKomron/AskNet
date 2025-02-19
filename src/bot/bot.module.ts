@@ -1,20 +1,19 @@
-import { Module } from "@nestjs/common";
-import { BotService } from "./bot.service";
-import { MongooseModule } from "@nestjs/mongoose";
-import { Bot, BotSchema } from "./models/tg_user.model";
-import { BotUpdate } from "./bot.update";
+import { Module } from '@nestjs/common';
+import { BotService } from './bot.service';
+import { BotUpdate } from './bot.update';
+import { MongooseModule } from '@nestjs/mongoose';
+import { Bot, BotSchema } from './schemas/bot.schema';
 
 @Module({
   imports: [
-    MongooseModule.forFeature([
-      {
-        name: Bot.name,
-        schema: BotSchema,
-      },
-    ]),
-  ],
-  controllers: [],
-  providers: [BotService, BotUpdate],
-  exports: [BotService]
+      MongooseModule.forFeature([
+        {
+          name: Bot.name,
+          schema: BotSchema,
+        },
+      ]),
+    ],
+  providers: [BotUpdate,BotService,],
+  exports:[BotService]
 })
 export class BotModule {}
