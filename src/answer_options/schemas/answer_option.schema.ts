@@ -9,9 +9,9 @@ export class AnswerOption {
     @Prop()
     question_id: number;    
     @Prop()
-    option_uzb: number;    
+    option_uzb: string;    
     @Prop()
-    option_rus: number;
+    option_rus: string;
 
       @Prop({type: [{type: mongoose.Schema.ObjectId,ref: "Question",},],})
       surveys: Question[];

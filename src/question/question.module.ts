@@ -4,7 +4,7 @@ import { QuestionController } from './question.controller';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Question, QuestionSchema } from './schemas/question.schema';
 import { AnswerOption, AnswerOptionSchema } from 'src/answer_options/schemas/answer_option.schema';
-import { Survey, SurveySchema } from 'src/surveys/schema/survey.entity';
+import { Survey, SurveySchema } from 'src/surveys/schema/survey.schema';
 
 @Module({
   imports: [

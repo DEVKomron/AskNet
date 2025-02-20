@@ -4,7 +4,7 @@ import { Model } from 'mongoose';
 import { CreateQuestionDto } from './dto/create-question.dto';
 import { UpdateQuestionDto } from './dto/update-question.dto';
 import { Question } from './schemas/question.schema';
-import { Survey } from 'src/surveys/schema/survey.entity';
+import { Survey } from 'src/surveys/schema/survey.schema';
 
 @Injectable()
 export class QuestionService {

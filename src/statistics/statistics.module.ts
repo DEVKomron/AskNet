@@ -3,7 +3,7 @@ import { StatisticsService } from './statistics.service';
 import { StatisticsController } from './statistics.controller';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Statistic, StatisticSchema } from './schemas/statistic.schema';
-import { Survey, SurveySchema } from 'src/surveys/schema/survey.entity';
+import { Survey, SurveySchema } from 'src/surveys/schema/survey.schema';
 
 @Module({  imports: [
     MongooseModule.forFeature([

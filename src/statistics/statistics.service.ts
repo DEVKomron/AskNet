@@ -4,7 +4,7 @@ import { Model } from 'mongoose';
 import { CreateStatisticDto } from './dto/create-statistic.dto';
 import { UpdateStatisticDto } from './dto/update-statistic.dto';
 import { Statistic } from './schemas/statistic.schema';
-import { Survey } from 'src/surveys/schema/survey.entity';
+import { Survey } from 'src/surveys/schema/survey.schema';
 
 @Injectable()
 export class StatisticsService {

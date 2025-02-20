@@ -4,7 +4,7 @@ import { Model } from 'mongoose';
 import { CreateSurveyDto } from './dto/create-survey.dto';
 import { UpdateSurveyDto } from './dto/update-survey.dto';
 import { Client } from 'src/client/schemas/client.schema';
-import { Survey } from './schema/survey.entity';
+import { Survey } from './schema/survey.schema';
 import { Statistic } from 'src/statistics/schemas/statistic.schema';
 import { Question } from 'src/question/schemas/question.schema';
 
@@ -38,4 +38,5 @@ export class SurveysService {
   async remove(id: string) {
     return this.surveyModel.findByIdAndDelete(+id);
   }
+  
 }

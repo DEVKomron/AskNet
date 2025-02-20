@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { SurveysService } from './surveys.service';
 import { SurveysController } from './surveys.controller';
 import { MongooseModule } from '@nestjs/mongoose';
-import { Survey, SurveySchema } from './schema/survey.entity';
+import { Survey, SurveySchema } from './schema/survey.schema';
 import { Question, QuestionSchema } from 'src/question/schemas/question.schema';
 import { Statistic, StatisticSchema } from 'src/statistics/schemas/statistic.schema';
 import { Client, ClientSchema } from 'src/client/schemas/client.schema';
